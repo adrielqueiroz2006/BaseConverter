@@ -13,10 +13,10 @@ O site permite ao usuário inserir um número em uma das cinco bases numéricas 
 ### Bases suportadas
 
 - Binário (base 2)
+- Ternário (base 3)
 - Octal (base 8)
 - Decimal (base 10)
 - Hexadecimal (base 16)
-- Base 5
 
 ## Como usar
 
