@@ -10,6 +10,8 @@ export function App() {
   const inputRef = useRef()
   const inputBaseRef = useRef()
 
+  const [convertedInputBase, setConvertedInputBase] = useState('')
+
   const [errorMessage, setErrorMessage] = useState('')
   const [outputBase2, setOutputBase2] = useState('')
   const [outputBase3, setOutputBase3] = useState('')
@@ -56,6 +58,8 @@ export function App() {
         return
       }
     }
+
+    setConvertedInputBase(inputBase)
 
     const convertedNumberBase2 = convertBase(number, inputBase, BigInt(2))
     const convertedNumberBase3 = convertBase(number, inputBase, BigInt(3))
@@ -121,51 +125,46 @@ export function App() {
 
         {outputBase2 && (
           <div id="outputContainer">
-            {inputBaseRef.current?.value !== '2' ? (
+            {convertedInputBase !== 2 ? (
               <div className="outputBaseContainer">
                 <p>
-                  {inputRef.current.value} (Base {inputBaseRef.current?.value})
-                  =
+                  {inputRef.current.value} (Base {convertedInputBase}) =
                 </p>
                 <h1>{outputBase2} (Base 2)</h1>
               </div>
             ) : null}
 
-            {inputBaseRef.current?.value !== '3' ? (
+            {convertedInputBase !== 3 ? (
               <div className="outputBaseContainer">
                 <p>
-                  {inputRef.current.value} (Base {inputBaseRef.current?.value})
-                  =
+                  {inputRef.current.value} (Base {convertedInputBase}) =
                 </p>
                 <h1>{outputBase3} (Base 3)</h1>
               </div>
             ) : null}
 
-            {inputBaseRef.current?.value !== '8' ? (
+            {convertedInputBase !== 8 ? (
               <div className="outputBaseContainer">
                 <p>
-                  {inputRef.current.value} (Base {inputBaseRef.current?.value})
-                  =
+                  {inputRef.current.value} (Base {convertedInputBase}) =
                 </p>
                 <h1>{outputBase8} (Base 8)</h1>
               </div>
             ) : null}
 
-            {inputBaseRef.current?.value !== '10' ? (
+            {convertedInputBase !== 10 ? (
               <div className="outputBaseContainer">
                 <p>
-                  {inputRef.current.value} (Base {inputBaseRef.current?.value})
-                  =
+                  {inputRef.current.value} (Base {convertedInputBase}) =
                 </p>
                 <h1>{outputBase10} (Base 10)</h1>
               </div>
             ) : null}
 
-            {inputBaseRef.current?.value !== '16' ? (
+            {convertedInputBase !== 16 ? (
               <div className="outputBaseContainer">
                 <p>
-                  {inputRef.current.value} (Base {inputBaseRef.current?.value})
-                  =
+                  {inputRef.current.value} (Base {convertedInputBase}) =
                 </p>
                 <h1>{outputBase16} (Base 16)</h1>
               </div>
