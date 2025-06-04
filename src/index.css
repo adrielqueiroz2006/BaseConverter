@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #121214;
+  color: #e1e1e6;
+}
+
+body,
+input,
+textarea,
+select,
+button {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+main {
+  max-width: 64rem;
+  margin: 5rem auto;
+  padding: 2.5rem;
+
+  border: 1.5px solid #00875f;
+  border-radius: 18px;
+  background: #202024;
+
+  display: flex;
+  flex-direction: column;
+
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+header {
+  color: #00875f;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  margin-top: 1rem;
+}
+
+label {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.inputsWrapper {
+  display: flex;
+  gap: 0 2rem;
+}
+
+.inputContainer {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.errorMessageContainer {
+  display: flex;
+  gap: 0.2rem;
+
+  margin-top: 0.8rem;
+
+  color: #f03847;
+  font-size: 1.125rem;
+}
+
+input,
+option,
+select {
+  height: 2.8rem;
+  border: 4px solid transparent;
+  border-radius: 12px;
+  font-size: 1.25rem;
+  padding: 0 1rem;
+
+  &:focus {
+    box-shadow: none;
+    border-color: #0a684d;
+  }
+
+  &::placeholder {
+    color: #7c7c8a;
+  }
+
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.buttonWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 2.5rem 0 0;
+}
+
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 25rem;
+  height: 3.5rem;
+
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  background: #00875f;
+
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  &:hover {
+    background-color: #00b37e;
+  }
+}
+
+button p {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+#outputContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+
+  gap: 2rem;
+  margin-top: 2rem;
+  padding: 2.5rem;
+
+  border: none;
+  border-radius: 12px;
+  background: #fff;
+
+  color: #121214;
+
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  & p {
+    font-size: 1.25rem;
+    word-break: break-word;
+    margin-bottom: 0.2rem;
+  }
+
+  & h1 {
+    word-break: break-word;
+    margin: 0;
+  }
+
+  & .outputBaseContainer {
+    text-align: center;
+  }
+}
